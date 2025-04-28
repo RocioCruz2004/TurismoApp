@@ -1,0 +1,301 @@
+/* src/assets/styles/components/EditarReservaAdmin.css */
+
+.editar-reserva-admin-container {
+  width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+  background: #fff;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 5vh 0 5vh 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2.2rem;
+  font-family: 'Poppins', 'Inter', sans-serif;
+  align-items: center;
+  justify-content: center;
+}
+
+.editar-reserva-admin-container h2 {
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: var(--primary-color, #FF5B61);
+  margin-bottom: 0.7rem;
+  text-align: center;
+  letter-spacing: -1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.editar-reserva-admin-datosruta {
+  display: flex;
+  gap: 2.5rem;
+  align-items: stretch;
+  background: #fff6f7;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(255,91,97,0.07);
+  padding: 2.5rem 2.5rem;
+  margin-bottom: 0.5rem;
+  width: 90vw;
+  height: 75vh;
+  min-height: 400px;
+  min-width: 320px;
+  max-width: 1400px;
+  max-height: 900px;
+}
+
+.editar-reserva-admin-imgwrap {
+  flex: 0 0 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.editar-reserva-admin-imgwrap img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(255,91,97,0.10);
+  background: #fff;
+  display: block;
+}
+
+.editar-reserva-admin-datoslist-scroll {
+  flex: 1 1 0%;
+  min-width: 0;
+  padding-right: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.editar-reserva-admin-datoslist {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  justify-content: center;
+  min-width: 0;
+}
+
+.editar-reserva-admin-datoslist p {
+  margin: 0.1rem 0;
+  color: #444;
+  font-size: 1.08rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.icon {
+  color: var(--primary-color, #FF5B61);
+  font-size: 1.15em;
+  margin-right: 0.3em;
+  vertical-align: middle;
+}
+
+.editar-reserva-admin-container label {
+  font-size: 1.18rem;
+  font-weight: 500;
+  color: #222;
+  margin-bottom: 0.3rem;
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.editar-reserva-admin-container input,
+.editar-reserva-admin-container select {
+  width: 100%;
+  padding: 1rem 1.2rem;
+  border: 1.8px solid #f3b6b8;
+  border-radius: 14px;
+  font-size: 1.18rem;
+  font-family: inherit;
+  margin-top: 0.2rem;
+  background: #fff6f7;
+  transition: border 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1px 6px rgba(255,91,97,0.04);
+}
+
+.editar-reserva-admin-container input:focus,
+.editar-reserva-admin-container select:focus {
+  border: 1.8px solid var(--primary-color, #FF5B61);
+  outline: none;
+  box-shadow: 0 0 0 2px #ffe5e6;
+}
+
+.editar-reserva-admin-container button {
+  background: var(--primary-color, #FF5B61);
+  color: #fff;
+  border: none;
+  border-radius: 16px;
+  padding: 1.1rem 0;
+  font-size: 1.22rem;
+  font-family: inherit;
+  font-weight: 700;
+  margin-top: 1.5rem;
+  cursor: pointer;
+  transition: background 0.18s, box-shadow 0.18s, transform 0.18s;
+  box-shadow: 0 4px 16px rgba(255,91,97,0.10);
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+}
+
+.editar-reserva-admin-container button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.editar-reserva-admin-container button:hover {
+  background: #d93e45;
+  transform: translateY(-2px) scale(1.03);
+}
+
+.editar-reserva-admin-container img {
+  width: 100%;
+  max-width: 380px;
+  border-radius: 16px;
+  margin: 0 auto 0.7rem auto;
+  display: block;
+  box-shadow: 0 2px 12px rgba(255,91,97,0.08);
+}
+
+.editar-reserva-admin-container p {
+  margin: 0.3rem 0 0.3rem 0;
+  color: #444;
+  font-size: 1.13rem;
+}
+
+.editar-reserva-admin-total {
+  font-size: 1.22rem;
+  color: var(--primary-color, #FF5B61);
+  font-weight: 700;
+  background: #fff6f7;
+  border-radius: 12px;
+  padding: 0.7rem 1rem;
+  margin-top: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  justify-content: center;
+  box-shadow: 0 1px 6px rgba(255,91,97,0.06);
+}
+
+.editar-reserva-admin-container strong {
+  color: var(--primary-color, #FF5B61);
+}
+
+.editar-reserva-admin-container hr {
+  border: none;
+  border-top: 2px solid #ffe5e6;
+  margin: 1.7rem 0;
+}
+
+/* DatePicker override */
+.editar-reserva-admin-container .react-datepicker-wrapper {
+  width: 100%;
+}
+
+.editar-reserva-admin-container .react-datepicker {
+  font-family: 'Poppins', 'Inter', sans-serif;
+  border-radius: 16px !important;
+  border: 1.5px solid #f3b6b8 !important;
+  box-shadow: 0 2px 12px rgba(255,91,97,0.10);
+  font-size: 1.13rem;
+  padding: 0.5rem 0.2rem;
+  background: #fff6f7;
+}
+
+.editar-reserva-admin-container .react-datepicker__header {
+  background: #fff6f7;
+  border-bottom: 1.5px solid #ffe5e6;
+  border-radius: 16px 16px 0 0;
+  padding-top: 1rem;
+}
+
+.editar-reserva-admin-container .react-datepicker__current-month,
+.editar-reserva-admin-container .react-datepicker__year-select,
+.editar-reserva-admin-container .react-datepicker__month-select {
+  color: var(--primary-color, #FF5B61);
+  font-weight: 600;
+  font-size: 1.13rem;
+  background: #fff6f7;
+  border-radius: 8px;
+  border: 1px solid #ffe5e6;
+  margin: 0 0.2rem;
+  padding: 0.2rem 0.5rem;
+}
+
+.editar-reserva-admin-container .react-datepicker__day--selected,
+.editar-reserva-admin-container .react-datepicker__day--keyboard-selected {
+  background: var(--primary-color, #FF5B61) !important;
+  color: #fff !important;
+  border-radius: 50% !important;
+}
+
+.editar-reserva-admin-container .react-datepicker__day--today {
+  border-radius: 50%;
+  border: 1.5px solid var(--primary-color, #FF5B61);
+}
+
+.editar-reserva-admin-container .react-datepicker__day {
+  border-radius: 50%;
+  transition: background 0.15s, color 0.15s;
+  font-size: 1.13rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  margin: 0.1rem;
+}
+
+.editar-reserva-admin-container .react-datepicker__day:hover {
+  background: #ffe5e6;
+  color: var(--primary-color, #FF5B61);
+}
+
+@media (max-width: 1200px) {
+  .editar-reserva-admin-datosruta {
+    width: 98vw;
+    height: auto;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.2rem;
+    padding: 1.2rem 0.5rem;
+    min-height: unset;
+    max-width: 99vw;
+    max-height: unset;
+  }
+  .editar-reserva-admin-imgwrap {
+    justify-content: flex-start;
+    margin-bottom: 0.5rem;
+    height: auto;
+    flex: none;
+  }
+  .editar-reserva-admin-imgwrap img {
+    width: 100%;
+    height: auto;
+    max-width: 350px;
+    margin: 0 auto;
+  }
+  .editar-reserva-admin-datoslist-scroll {
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 700px) {
+  .editar-reserva-admin-container {
+    padding: 1.2rem 0.5rem;
+    width: 100vw;
+  }
+  .editar-reserva-admin-container img {
+    max-width: 100%;
+  }
+} 

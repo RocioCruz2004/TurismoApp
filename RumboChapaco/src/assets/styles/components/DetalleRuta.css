@@ -1,0 +1,175 @@
+
+.detalle-ruta-container {
+    font-family: 'Inter', sans-serif;
+    padding: 40px;
+    max-width: auto;
+    margin: 0 auto;
+    background-color: #fff;
+
+
+    margin-top: 120px;
+  }
+  
+  /* Título de la ruta sobre el mapa */
+  .map-title {
+    font-size: 2.5rem;
+    color: #FF5B61;
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 0 20px;
+
+  }
+  
+  /* Descripción y detalles de la ruta */
+  .detalle-ruta-container p {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+    line-height: 1.6;
+    padding: 0 20px;
+  }
+  
+  /* Contenedor de duración y precio */
+  .detalle-ruta-container .informacion-ruta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  .detalle-ruta-container .informacion-ruta p {
+    font-size: 1.3rem;
+    color: #555;
+    margin: 5px 0;
+  }
+  
+  /* Contenedor para el mapa */
+  .map-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 30px auto;
+    border-radius: 10px;
+    background-color: #f0f0f0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+  }
+  
+  /* Botón de reservar */
+  .detalle-ruta-container button {
+    width: 50%;
+    padding: 20px;
+    background-color: #FF5B61;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.8rem;
+    cursor: pointer;
+    margin: 30px auto;
+    display: block;
+    text-align: center;
+  }
+  
+  /* Quitar subrayado del enlace dentro del botón */
+  .detalle-ruta-container button a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Hover del botón */
+  .detalle-ruta-container button:hover {
+    background-color: #FF3C4D;
+  }
+  
+  /* Estilo para las secciones de "Ver Paradas" y "Recomendaciones" */
+  .detalles-seccion {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Estilo para la sección de paradas y actividades */
+  details {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+
+    border: 1px solid #eee;
+  }
+  
+  details summary {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #FF5B61;
+    cursor: pointer;
+  }
+  
+  details summary:hover {
+    text-decoration: underline;
+  }
+  
+  details p {
+    font-size: 1.2rem;
+    color: #555;
+  }
+  
+/* Estilo para el contenedor de las paradas (imágenes y nombres) */
+.paradas-container {
+    display: flex;
+    justify-content: center; /* Asegura que el contenido se centre horizontalmente */
+    flex-wrap: wrap; /* Permite que las imágenes se ajusten en pantallas pequeñas */
+    gap: 20px;
+  }
+  
+  /* Contenedor para cada parada */
+  .parada-item {
+    flex: 0 1 30%; /* Tres imágenes en una fila con espacio */
+    text-align: center;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column; /* Asegura que la imagen y el nombre estén en columna */
+    justify-content: center; /* Alinea el contenido verticalmente */
+    align-items: center; /* Alinea todo al centro horizontalmente */
+    height: 300px; /* Altura ajustable para el contenedor */
+    margin: 10px 0; /* Añadido un margen para asegurar que no se peguen */
+  }
+  
+  /* Estilo para la imagen */
+  .parada-item img {
+    width: 100%; /* La imagen ocupará todo el ancho disponible */
+    height: auto; /* Mantiene la proporción de la imagen */
+    max-height: 200px; /* Limita la altura de la imagen */
+    border-radius: 8px;
+    margin-bottom: 10px; /* Añadido margen entre la imagen y el nombre */
+  }
+  
+  /* Estilo para el texto debajo de la imagen */
+  .parada-item p {
+    font-size: 1.2rem; /* Tamaño del texto */
+    color: #FF5B61; /* Rojo para resaltar el nombre */
+    font-weight: bold;
+    margin-top: 10px; /* Ajuste del margen superior para estar justo debajo de la imagen */
+    text-align: center; /* Alineamos el texto al centro */
+  }
+  
+  /* Estilos responsivos */
+  @media (max-width: 768px) {
+    .paradas-container {
+      display: block; /* Los elementos se apilan en pantallas pequeñas */
+      gap: 10px;
+    }
+  
+    .parada-item {
+      flex: 0 1 100%; /* Cada imagen y nombre ocupará todo el ancho en pantallas pequeñas */
+    }
+  
+    .parada-item img {
+      max-width: 100%; /* Aseguramos que las imágenes se adapten bien */
+      max-height: 250px; /* Ajuste de la altura de la imagen en pantallas pequeñas */
+    }
+  }
+  

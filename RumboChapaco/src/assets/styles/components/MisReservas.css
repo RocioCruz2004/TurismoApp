@@ -1,0 +1,131 @@
+/* MisReservas.css - Estilos para la página de Mis Reservas */
+
+:root {
+    --primary: #FF5B61;
+    /* Rojo principal */
+    --primary-dark: #D93E45;
+    /* Rojo oscuro - hover */
+    --white: #FFFFFF;
+    /* Blanco - fondo principal */
+    --bg-secondary: #F5F0EB;
+    /* Gris cálido - fondos secundarios */
+    --text: #333333;
+    /* Negro atenuado - textos */
+    --border: #E0E0E0;
+    /* Borde claro para elementos */
+}
+
+/* Contenedor principal */
+.mis-reservas-container {
+    max-width: 1000px;
+    margin-top: 8rem !important;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    color: var(--text);
+}
+
+/* Encabezados */
+.mis-reservas-titulo {
+    color: var(--primary);
+    margin: 25px 0;
+    text-align: center;
+    font-size: 2.2rem;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.mis-reservas-titulo::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--primary);
+}
+
+/* Mensaje cuando no hay reservas */
+.no-reservas {
+    text-align: center;
+    padding: 40px;
+    background-color: var(--bg-secondary);
+    border-radius: 8px;
+    margin: 20px 0;
+    font-size: 1.1rem;
+}
+
+/* Tarjeta de reserva */
+.reserva-card {
+    background-color: var(--white);
+    border-radius: 8px;
+    border-left: 4px solid var(--primary);
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.reserva-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.reserva-card p {
+    margin: 10px 0;
+    line-height: 1.5;
+}
+
+.reserva-card strong {
+    color: var(--primary-dark);
+    font-weight: bold;
+}
+
+/* Monto total destacado */
+.reserva-monto {
+    font-size: 1.2rem;
+    color: var(--primary);
+    font-weight: bold;
+}
+
+/* Sección de cambios */
+.cambios-section {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+}
+
+.cambios-titulo {
+    color: var(--primary);
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.cambios-info {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Mapa */
+.mapa-container {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    margin-top: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .mis-reservas-container {
+        padding: 15px;
+    }
+
+    .mis-reservas-titulo {
+        font-size: 1.8rem;
+    }
+
+    .reserva-card {
+        padding: 15px;
+    }
+}

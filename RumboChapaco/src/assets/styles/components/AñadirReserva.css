@@ -1,0 +1,116 @@
+/* Estilos generales */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+  }
+  
+  /* Contenedor principal */
+  .añadir-reserva-container {
+    margin-top: 9rem !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-top: 50px;
+  }
+  
+  /* Titulo principal */
+  .añadir-reserva-container h1 {
+    font-size: 2rem;
+    color: #FF5B61;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  /* Formulario */
+  .añadir-reserva-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  /* Inputs y Selects */
+  .añadir-reserva-container select,
+  .añadir-reserva-container input,
+  .añadir-reserva-container .react-datepicker-wrapper input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    outline: none;
+    width: 100%;
+    transition: border 0.2s ease;
+  }
+  
+  .añadir-reserva-container select:focus,
+  .añadir-reserva-container input:focus {
+    border-color: #FF5B61;
+  }
+  
+  /* Botón de añadir reserva */
+  .añadir-reserva-container button {
+    padding: 12px;
+    background-color: #FF5B61;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    max-width: 200px;
+    align-self: center;
+  }
+  
+  .añadir-reserva-container button:hover {
+    background-color: #D93E45;
+  }
+  
+  /* Etiquetas de los campos */
+  .añadir-reserva-container label {
+    font-size: 1.1rem;
+    color: #333;
+  }
+  
+  /* Contenido del precio */
+  .añadir-reserva-container p {
+    font-size: 1.1rem;
+    color: #333;
+    margin-top: 10px;
+  }
+  
+  /* Ajustes para móviles */
+  @media (max-width: 768px) {
+    .añadir-reserva-container {
+      padding: 15px;
+    }
+  
+    .añadir-reserva-container h1 {
+      font-size: 1.6rem;
+    }
+  
+    .añadir-reserva-container label,
+    .añadir-reserva-container p {
+      font-size: 1rem;
+    }
+  
+    .añadir-reserva-container button {
+      font-size: 1rem;
+      width: 100%;
+    }
+  }
+/* Estilo para el texto en negrilla */
+.añadir-reserva-container strong {
+    color: #FF5B61; /* Rojo */
+  }
+    

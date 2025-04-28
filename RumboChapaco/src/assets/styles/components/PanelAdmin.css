@@ -1,0 +1,159 @@
+/* Estilos base para el Panel Admin */
+body {
+    overflow-x: hidden; /* Previene el desbordamiento horizontal */
+  }
+  
+  .panel-admin-container {
+    max-width: 900px;
+    margin: 3rem auto 2rem auto;
+    padding: 2rem 1.2rem 1.5rem 1.2rem;
+    background: #fff;
+    border: 1px solid #ededed;
+    border-radius: 12px;
+    box-shadow: none;
+    margin-top: 156px;
+  }
+  
+  .panel-admin-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #232323;
+    text-align: left;
+    margin-bottom: 1.5rem;
+    padding-left: 0.1rem;
+    border-bottom: 1px solid #ededed;
+    padding-bottom: 0.5rem;
+    background: none;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  
+  /* Contenedor principal de los paneles */
+  .panel-admin-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+    width: 100%;
+    padding: 0;
+  }
+  
+  /* Estilos para la sección de ruta popular */
+  .panel-admin-ruta {
+    background: #fff;
+    box-shadow: none;
+    border-radius: 8px;
+    border: 1px solid #ededed;
+    padding: 1rem 0.7rem;
+    transition: border 0.2s;
+  }
+  
+  .panel-admin-heading {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #FF5B61;
+    background: none;
+    border-left: 2px solid #FF5B61;
+    border-radius: 0;
+    box-shadow: none;
+    margin-bottom: 0.7rem;
+    padding: 0.2rem 0 0.2rem 0.7rem;
+    letter-spacing: 0.1px;
+  }
+  
+  .panel-admin-ruta-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .panel-admin-ruta-img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    object-fit: cover;
+    max-height: 180px;
+    box-shadow: none;
+  }
+  
+  .panel-admin-ruta h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #FF5B61;
+  }
+  
+  /* Estilos para la sección de mes */
+  .panel-admin-mes {
+    background: #fff;
+    box-shadow: none;
+    border-radius: 8px;
+    border: 1px solid #ededed;
+    padding: 1rem 0.7rem;
+    transition: border 0.2s;
+    padding-bottom: 0rem;
+  }
+  
+  .panel-admin-month {
+    font-size: 5.3rem;
+    font-weight: 700;
+    color: #FF5B61;
+    text-align: center;
+    margin-top: 0.7rem;
+    text-shadow: none;
+  }
+  
+  /* Botones */
+  .panel-admin-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    margin-top: 1.2rem;
+    padding: 0;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .panel-admin-buttons button {
+    background: #fff;
+    color: #FF5B61;
+    padding: 0.6rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border: 1px solid #FF5B61;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, border 0.2s;
+    width: 100%;
+    box-shadow: none;
+  }
+  
+  .panel-admin-buttons button:hover {
+    background: #FF5B61;
+    color: #fff;
+    border: 1px solid #FF5B61;
+  }
+  
+  /* Responsividad */
+  @media (max-width: 900px) {
+    .panel-admin-content {
+      grid-template-columns: 1fr;
+      gap: 0.7rem;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .panel-admin-container {
+      padding: 0.7rem 0.1rem;
+    }
+    .panel-admin-title {
+      font-size: 1.1rem;
+      padding-left: 0.1rem;
+    }
+    .panel-admin-heading {
+      font-size: 0.9rem;
+      padding: 0.1rem 0 0.1rem 0.4rem;
+    }
+    .panel-admin-month {
+      font-size: 1rem;
+    }
+  }

@@ -1,0 +1,203 @@
+{
+  "categorias": {
+    "aventura": "Rutas con actividades físicas o caminatas",
+    "cultura": "Rutas con enfoque cultural",
+    "gastronomia": "Rutas con degustación de vinos, comida"
+  },
+  "reservas": {
+    "-OOZ4n5w-B2kp0gnptPU": {
+      "cantidadPersonas": 1,
+      "fecha": "2025-04-27",
+      "fechaCreado": "2025-04-16",
+      "hora": "09:00",
+      "idRuta": "ruta002",
+      "monto": 350,
+      "usuarioId": "Wtm6R04h3igpg7AERIvJGhfsqCY2"
+    },
+    "-OO_r84S-lJynSlna8rI": {
+      "cantidadPersonas": 2,
+      "fecha": "2025-05-08",
+      "fechaCreado": "2025-04-23",
+      "hora": "10:00",
+      "id": "-OO_r84S-lJynSlna8rI",
+      "idRuta": "ruta001",
+      "monto": 640,
+      "nombreRuta": "Ruta del Vino & Singani",
+      "nombreUsuario": "Rocio Cruz",
+      "usuarioId": "Wtm6R04h3igpg7AERIvJGhfsqCY2"
+    },
+    "-OOt68DUv4eAfvRvlmsH": {
+      "cantidadPersonas": 1,
+      "fecha": "2025-04-30",
+      "fechaCreado": "2025-04-27",
+      "hora": "12:00",
+      "idRuta": "ruta002",
+      "monto": 350,
+      "usuarioId": "Wtm6R04h3igpg7AERIvJGhfsqCY2"
+    },
+    "-OOtpoIk5QJ2mZxb01rx": {
+      "cantidadPersonas": 1,
+      "fecha": "2025-05-01",
+      "fechaCreado": "2025-04-27",
+      "hora": "13:00",
+      "idRuta": "ruta001",
+      "monto": 320,
+      "usuarioId": "Wtm6R04h3igpg7AERIvJGhfsqCY2"
+    },
+    "-OOts6eHfDZFMz2d7BnO": {
+      "cantidadPersonas": 1,
+      "fecha": "2025-05-01",
+      "fechaCreado": "2025-04-27",
+      "hora": "16:00",
+      "idRuta": "ruta001",
+      "monto": 320,
+      "usuarioId": "Wtm6R04h3igpg7AERIvJGhfsqCY2"
+    },
+    "reserva001": {
+      "cantidadPersonas": 2,
+      "fecha": "2025-04-25",
+      "fechaCreado": "2024-12-12",
+      "hora": "14:00",
+      "idRuta": "ruta001",
+      "monto": 640,
+      "usuarioId": "Wtm6R04h3igpg7AERIvJGhfsqCY2"
+    },
+    "reserva002": {
+      "cantidadPersonas": 2,
+      "fecha": "2025-04-28",
+      "fechaCreado": "2025-03-09",
+      "hora": "09:00",
+      "id": "reserva002",
+      "idRuta": "ruta001",
+      "monto": 640,
+      "nombreRuta": "Ruta del Vino & Singani",
+      "nombreUsuario": "Rocio Cruz Zambrana",
+      "usuarioId": "Wtm6R04h3igpg7AERIvJGhfsqCY2"
+    }
+  },
+  "rutas": {
+    "ruta001": {
+      "categoria": "gastronomia",
+      "descripcion": "Un recorrido inolvidable por las principales bodegas del valle tarijeño, donde podrás conocer el proceso del vino y singani artesanal.",
+      "duracion": "5 horas",
+      "estado": "activo",
+      "imagen": "https://i.imgur.com/H87qNNr.jpeg",
+      "nombre": "Ruta del Vino & Singani",
+      "paradas": [
+        {
+          "id": "0",
+          "imagen": "https://i.imgur.com/8qd6Eqr.jpeg",
+          "lat": -21.655494977449663,
+          "lng": -64.65752906166263,
+          "nombre": "Casa Blanca"
+        },
+        {
+          "id": "1",
+          "imagen": "https://i.imgur.com/WykiK6z.jpeg",
+          "lat": -21.56516,
+          "lng": -64.63103,
+          "nombre": "BODEGAS KUHLMANN (Singani Los Parrales)"
+        },
+        {
+          "id": "2",
+          "imagen": "https://i.imgur.com/Y56q8Hx.jpeg",
+          "lat": -21.55301925229507,
+          "lng": -64.69829315581799,
+          "nombre": "Bodega Kohlberg"
+        },
+        {
+          "id": "3",
+          "imagen": "https://i.imgur.com/uWy4hQl.jpeg",
+          "lat": -21.685584840087216,
+          "lng": -64.65363978366918,
+          "nombre": "Casa Vieja"
+        },
+        {
+          "id": "4",
+          "imagen": "https://i.imgur.com/ou0bl4q.jpeg",
+          "lat": -21.674204009079855,
+          "lng": -64.66050299814519,
+          "nombre": "Tierra Chapaca Bodega Turística"
+        }
+      ],
+      "precauciones": "Se recomienda llevar ropa ligera, lentes de sol y protector solar. Evitar consumir en exceso durante las degustaciones.",
+      "precio": "",
+      "precioBs": 320
+    },
+    "ruta002": {
+      "categoria": "Enoturismo",
+      "descripcion": "Un recorrido por las bodegas industriales más importantes, con degustación de vinos locales.",
+      "duracion": "6 horas",
+      "estado": "activo",
+      "imagen": "https://i.imgur.com/lTiCzpO.jpeg",
+      "nombre": "Ruta del Vino Industrial",
+      "paradas": [
+        {
+          "id": "0",
+          "imagen": "https://i.imgur.com/WykiK6z.jpeg",
+          "lat": -21.565106676969965,
+          "lng": -64.6310253558175,
+          "nombre": "Bodega Kuhlmann"
+        },
+        {
+          "id": "1",
+          "imagen": "https://i.imgur.com/PIbbrnv.jpeg",
+          "lat": -21.528342966832586,
+          "lng": -64.74533199962993,
+          "nombre": "Bodega Aranjuez"
+        },
+        {
+          "id": "2",
+          "imagen": "https://i.imgur.com/InliTCe.jpeg",
+          "lat": -21.585349610259552,
+          "lng": -64.61291589177644,
+          "nombre": "Finca Aranjuez"
+        },
+        {
+          "id": "3",
+          "imagen": "https://i.imgur.com/rlFT73T.jpeg",
+          "lat": -21.53325736011361,
+          "lng": -64.7737910745771,
+          "nombre": "Destilería Castellanos del Carpio"
+        },
+        {
+          "id": "4",
+          "imagen": "https://i.imgur.com/ZC5spLs.jpeg",
+          "lat": -21.576893094041097,
+          "lng": -64.66230251825205,
+          "nombre": "Bodegas Campos de Solana"
+        },
+        {
+          "id": "parada6",
+          "imagen": "https://i.imgur.com/gdfLfJH.jpeg",
+          "lat": -21.59660833091351,
+          "lng": -64.60945058186293,
+          "nombre": "Hacienda Kohlberg"
+        }
+      ],
+      "precauciones": "Evitar el consumo excesivo de alcohol, llevar ropa cómoda y sombrero.",
+      "precio": "350.00",
+      "precioBs": 350
+    }
+  },
+  "usuarios": {
+    "LW3BEIii0ec1TvA0s4YSm6JJzZC3": {
+      "correo": "magistvchio@gmail.com",
+      "nombre": "Cliente Prueba",
+      "rol": "cliente",
+      "telefono": "+59172993326"
+    },
+    "Wtm6R04h3igpg7AERIvJGhfsqCY2": {
+      "correo": "rocio.cruz.rcz.wpp@gmail.com",
+      "nombre": "Rocio Cruz Zambrana",
+      "rol": "cliente",
+      "telefono": "+59172993326"
+    },
+    "dIW2UYH5zGX5DjKI7MEcn2EB6nP2": {
+      "correo": "rocio.cruz.rcz@gmail.com",
+      "nombre": "Admin",
+      "rol": "admin",
+      "telefono": "+59172993326"
+    }
+  }
+}

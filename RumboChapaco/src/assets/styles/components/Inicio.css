@@ -1,0 +1,244 @@
+/* Estilos base */
+.main-content {
+  font-family: 'Inter', sans-serif;
+  margin-top: 150px; /* Esto se ajusta para tener espacio debajo del navbar */
+  color: #333333;
+  padding: 0px;
+  margin-bottom: 80px;
+}
+
+/* Hero Section */
+.hero-section-inicio {
+  position: relative;
+  height: 73vh; /* O puedes poner 100vh para ocupar toda la pantalla */
+  text-align: center;
+  padding: 60px 0px;
+  margin-bottom: 100px;
+  display: flex; /* Usamos Flexbox */
+  justify-content: center; /* Centrado horizontal */
+  align-items: center; /* Centrado vertical */
+}
+
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Mantener el video cubriendo todo el contenedor */
+  z-index: -1; /* Asegura que el video quede detrás del contenido */
+}
+
+/* Contenedor del slogan */
+.slogan-container {
+  background-color: rgba(128, 128, 128, 0.5); /* Color plomo con opacidad */
+  border-radius: 20px;
+  padding: 10px 20px; /* Reducido el padding a la mitad */
+  width: 50%; /* Hacemos el contenedor del slogan más estrecho */
+}
+
+.slogan {
+  font-size: 4rem; /* Aumentamos el tamaño de la fuente */
+  margin-bottom: 1rem;
+  color: white;
+  font-weight: bold; /* Hacemos el texto en negrita */
+}
+
+.login-btn {
+  padding: 15px 30px;
+  background-color: white;
+  color: #FF5B61;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.5rem; /* Aumentamos el tamaño de la fuente */
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-weight: bold; /* Hacemos el texto en negrita */
+}
+
+.login-btn:hover {
+  background-color: #D93E45;
+  color: white;
+}
+
+/* About Section */
+.about-section {
+  margin: 30px 0;
+}
+
+.about-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 10%;
+  max-width: 1200px;
+}
+
+/* Estilo para la imagen */
+.about-image {
+  flex: 0 0 60%; /* Imagen ocupa 35% */
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* Estilo para el texto */
+.about-text {
+  flex: 0 0 60%; /* Texto ocupa 60% */
+  text-align: left;
+  padding-right: 20px;
+}
+
+.about-text h2 {
+  font-size: 4.5rem;
+  color: #FF5B61;
+  margin-bottom: 25px;
+}
+
+.about-text p {
+  font-size: 1.5rem;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 25px;
+}
+
+.read-more {
+  color: #FF5B61;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+/* Features Section */
+.features-section {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.features-section h2 {
+  font-size: 2.5rem;
+  color: #FF5B61;
+  margin-bottom: 40px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Ajuste de columnas */
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.feature {
+  background-color: #F5F0EB;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.feature:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+.feature h3 {
+  font-size: 1.8rem;
+  color: #FF5B61;
+  margin-bottom: 15px;
+}
+
+.feature p {
+  font-size: 1.2rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+.feature-icon {
+  font-size: 3rem;
+  color: #FF5B61;
+  margin-bottom: 15px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  /* Hero Section */
+  .hero-section-inicio {
+    height: auto; /* En pantallas pequeñas el video puede ser más pequeño */
+  } 
+
+  .slogan {
+    font-size: 5vw; /* Reducir tamaño en pantallas más pequeñas */
+  }
+
+  /* About Section */
+  .about-content {
+    flex-direction: column; /* Apilamos las columnas en pantallas pequeñas */
+    gap: 20px; /* Mayor espacio entre la imagen y el texto */
+  }
+
+  .about-image {
+    flex: 0 0 100%; /* Imagen ocupa el 100% en pantallas pequeñas */
+  }
+
+  .about-text {
+    flex: 0 0 100%; /* Texto ocupa el 100% en pantallas pequeñas */
+    padding-right: 0; /* Eliminar margen derecho en pantallas pequeñas */
+  }
+
+  .about-text h2 {
+    font-size: 2rem; /* Reducir tamaño del título en pantallas pequeñas */
+  }
+
+  .about-text p {
+    font-size: 1.1rem; /* Reducir tamaño del texto en pantallas pequeñas */
+  }
+
+  /* Features Section */
+  .features-grid {
+    grid-template-columns: 1fr; /* En pantallas pequeñas, apilamos las características */
+  }
+
+  .feature h3 {
+    font-size: 1.5rem;
+  }
+
+  .feature p {
+    font-size: 1rem;
+  }
+}
+
+/* Flecha de scroll */
+.scroll-down-arrow {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: bounce 2s infinite;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+}
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0) translateX(-50%);
+  }
+  40% {
+    transform: translateY(-20px) translateX(-50%);
+  }
+  60% {
+    transform: translateY(-10px) translateX(-50%);
+  }
+}
+

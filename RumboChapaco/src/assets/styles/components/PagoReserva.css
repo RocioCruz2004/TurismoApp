@@ -1,0 +1,88 @@
+/* Contenedor principal */
+.pago-reserva-container {
+    font-family: 'Inter', sans-serif;
+    padding: 250px;
+    max-width:auto; /* Limitar el tamaño del contenedor */
+    margin: auto; /* Centrado automático */
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Centrar todo el contenido */
+  }
+  
+/* Título principal */
+.pago-reserva-container h2 {
+    font-size: 2.5rem;
+    color: #FF5B61;
+    text-align: center;
+    margin: 0; /* Eliminar margen inferior */
+    padding: 10px 0; /* Reducir el padding superior e inferior */
+  }
+  
+  /* Estilo para la información de la reserva */
+  .pago-reserva-container p {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+    line-height: 1.6;
+    text-align: center; /* Alineado a la izquierda */
+    padding:  0px;
+  }
+  
+  
+  /* Estilo para el QR */
+  .pago-reserva-container .qr-code {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  
+  .pago-reserva-container .qr-code canvas {
+    border: 2px solid #ffffff;
+    border-radius: 0px;
+    padding: 10px;
+  }
+  
+  /* Botón de confirmar y descargar comprobante */
+  .pago-reserva-container button {
+    width: 60%; /* El botón tendrá un 60% del ancho del contenedor */
+    padding: 15px;
+    background-color: #FF5B61;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin: 30px auto; /* Centrado automático */
+    display: block;
+    text-align: center;
+  }
+  
+  /* Hover del botón */
+  .pago-reserva-container button:hover {
+    background-color: #FF3C4D;
+  }
+  
+  /* Estilos responsivos */
+  @media (max-width: 768px) {
+    .pago-reserva-container {
+      padding: 20px;
+    }
+  
+    .pago-reserva-container h2 {
+      font-size: 2rem;
+    }
+  
+    .pago-reserva-container p {
+      font-size: 1rem;
+    }
+  
+    .pago-reserva-container button {
+      font-size: 1.2rem;
+    }
+  
+    .pago-reserva-container .qr-code {
+      margin-bottom: 20px;
+    }
+  }
+  

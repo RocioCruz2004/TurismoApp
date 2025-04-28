@@ -1,0 +1,244 @@
+/* PanelCliente.css */
+
+/* Estilo global para la página */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Contenedor principal de la página */
+  .panel-cliente-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  /* Imagen de portada */
+  .panel-cliente-header {
+    position: relative;
+    width: 100%;
+    height: 500px !important;
+    overflow: hidden;
+  }
+  
+  .panel-cliente-header img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .panel-cliente-header .welcome-message {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  .panel-cliente-header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+  }
+  
+  .panel-cliente-header h3 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+  }
+  
+  .panel-cliente-header button {
+    background-color: #FF5B61;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+  }
+  
+  .panel-cliente-header button:hover {
+    background-color: #FF3C4D;
+  }
+  
+  /* Sección de rutas populares */
+  .rutas-populares-section {
+    width: 100%;
+    padding: 2rem;
+  }
+  
+  .rutas-populares-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Estilo para el título de las rutas populares */
+.rutas-populares-header h2 {
+    font-size: 2rem;
+    margin: 0;
+    color: #FF5B61; /* Color rojo utilizado en otras partes de la página */
+  }
+  
+  .rutas-populares-header a {
+    text-decoration: none;
+    color: #FF5B61;
+    font-size: 1rem;
+  }
+  
+  .rutas-populares-header a:hover {
+    text-decoration: underline;
+  }
+  
+  .rutas-populares-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+.rutas-populares-header a {
+    text-decoration: none;
+    color: #FF5B61; /* Rojo utilizado en otras partes de la página */
+    font-size: 24rem;
+    font-weight: bold;
+    margin-left: 0; /* Asegurarse que no haya margen extra */
+    padding: 0 100px; /* Espaciado adecuado para que no se corte */
+    white-space: nowrap; /* Evitar que el texto se desborde a la siguiente línea */
+  }
+  
+  /* Agregar un pequeño ajuste para que el enlace se vea bien al pasar el mouse */
+  .rutas-populares-header a:hover {
+    text-decoration: underline;
+  }
+  
+  
+  .ruta-card {
+    width: 300px;
+    border: 0.5px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  
+  .ruta-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .ruta-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+  
+  .ruta-card h3 {
+    margin: 0.5rem;
+    text-align: center;
+    font-size: 1.2rem;
+  }
+
+.rutas-populares-header {
+  display: flex;
+  justify-content: space-between; /* Espacio entre el título y el enlace */
+  align-items: center;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+/* Alineación del enlace "Ver todas" */
+.rutas-populares-header a {
+  text-decoration: none;
+  color: #FF5B61;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  margin-left: 10px; /* Espacio adicional si es necesario */
+}
+
+/* Centrado del título y enlace */
+@media (max-width: 768px) {
+  .rutas-populares-header {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: center;
+  }
+
+  .rutas-populares-header a {
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+  }
+}
+  
+  /* Responsividad para pantallas muy pequeñas (móviles) */
+  @media (max-width: 480px) {
+    .rutas-populares-header a {
+      font-size: 1rem; /* Ajustar el tamaño del enlace */
+      padding: 0.5rem;
+    }
+  }
+  /* PanelCliente.css */
+
+/* Estilo para la cabecera del panel de cliente */
+.panel-cliente-header {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    margin-top: 150px; /* Separación del navbar */
+  }
+  
+  .panel-cliente-header img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .panel-cliente-header .welcome-message {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -5%);
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  .panel-cliente-header .welcome-message {
+    color: white; /* Cambiar el color del texto a blanco */
+    text-shadow: 1px 1px 2px black; /* Mantener el sombreado para mejorar la visibilidad */
+  }
+  
+  .panel-cliente-header h1, .panel-cliente-header h3 {
+    color: white; /* Asegurarse que los títulos también sean blancos */
+  }
+  
+  .panel-cliente-header h3 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+  }
+  
+  .panel-cliente-header button {
+    background-color: #FF5B61;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+  }
+  
+  .panel-cliente-header button:hover {
+    background-color: #FF3C4D;
+  }
+  

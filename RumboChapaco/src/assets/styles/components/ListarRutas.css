@@ -1,0 +1,277 @@
+:root {
+  --primary-color: #FF5B61;
+  --primary-hover: #D93E45;
+  --white: #FFFFFF;
+  --text-color: #333333;
+  --gray-light: #f5f5f5;
+  --gray-border: #e0e0e0;
+}
+
+.listar-rutas-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  font-family: 'Inter', sans-serif;
+  margin-top: 156px;
+}
+
+.listar-rutas-title-center {
+  text-align: left;
+  font-size: 2.3rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  margin-bottom: 2.5rem;
+  letter-spacing: 0.5px;
+  color: var(--text-color);
+}
+
+.listar-rutas-filtros-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.filtro-buscar {
+  flex: 1;
+  min-width: 250px;
+}
+
+.filtro-estado {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.filtro-label {
+  font-size: 1.1rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  border: 2px solid var(--gray-border);
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-family: 'Inter', sans-serif;
+  outline: none;
+  transition: border 0.2s;
+  color: var(--text-color);
+}
+
+.search-input:focus {
+  border: 2px solid var(--primary-color);
+}
+
+.select-filter {
+  padding: 0.7rem 1.2rem;
+  border: 2px solid var(--gray-border);
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-family: 'Inter', sans-serif;
+  background: var(--white);
+  outline: none;
+  transition: border 0.2s;
+  color: var(--text-color);
+}
+
+.select-filter:focus {
+  border: 2px solid var(--primary-color);
+}
+
+.add-route-btn-row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.add-route-btn {
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: none;
+  padding: 1rem 2.5rem;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  box-shadow: 0 2px 8px rgba(255,91,97,0.13);
+  transition: background 0.2s, box-shadow 0.2s, color 0.2s;
+  letter-spacing: 0.5px;
+}
+
+.add-route-btn:hover {
+  background-color: var(--primary-hover);
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(255,91,97,0.18);
+}
+
+.add-icon {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.tabla-rutas-wrapper {
+  margin-top: 1.5rem;
+  overflow-x: auto;
+}
+
+.rutas-table {
+  width: 100%;
+  min-width: 900px;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: var(--white);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.rutas-table th, .rutas-table td {
+  padding: 1.2rem 1.5rem;
+  text-align: left;
+  white-space: normal;
+  word-break: break-word;
+}
+
+.rutas-table th {
+  background: var(--primary-color);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--white);
+  border-bottom: 2px solid var(--gray-border);
+  letter-spacing: 0.5px;
+}
+
+.rutas-table td {
+  font-size: 1.05rem;
+  color: var(--text-color);
+  border-bottom: 1px solid var(--gray-border);
+  font-family: 'Inter', sans-serif;
+}
+
+.rutas-table th:nth-child(2),
+.rutas-table td:nth-child(2) {
+  min-width: 220px;
+}
+
+.rutas-table th:nth-child(6),
+.rutas-table td:nth-child(6) {
+  min-width: 140px;
+}
+
+.rutas-table tr:last-child td {
+  border-bottom: none;
+}
+
+.rutas-table tr {
+  transition: background 0.18s;
+}
+
+.rutas-table tr:hover {
+  background: var(--gray-light);
+}
+
+.estado-activo {
+  color: #219653;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+}
+
+.estado-inactivo {
+  color: #e53935;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+}
+
+.edit-btn {
+  background: var(--primary-color);
+  color: var(--white);
+  border: none;
+  border-radius: 25px;
+  padding: 0.5rem 1.2rem;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(255,91,97,0.13);
+}
+
+.edit-btn:hover {
+  background: var(--primary-hover);
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(255,91,97,0.18);
+}
+
+.edit-icon {
+  font-size: 1.1rem;
+}
+
+.no-rutas-message {
+  text-align: center;
+  padding: 2rem;
+  color: #888;
+  font-style: italic;
+  font-family: 'Inter', sans-serif;
+}
+
+.icon-title {
+  display: inline-flex;
+  vertical-align: middle;
+  margin-right: 0.7rem;
+  position: relative;
+  top: 4px;
+}
+
+.filtro-label svg {
+  margin-right: 0.4rem;
+  vertical-align: middle;
+  position: relative;
+  top: -2px;
+}
+
+.add-icon svg {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 0.3rem;
+}
+
+.edit-icon svg {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 0.3rem;
+}
+
+@media (max-width: 800px) {
+  .listar-rutas-filtros-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+  .add-route-btn-row {
+    justify-content: stretch;
+  }
+  .listar-rutas-title-center {
+    font-size: 1.5rem;
+  }
+  .rutas-table {
+    min-width: 600px;
+  }
+  .rutas-table th, .rutas-table td {
+    padding: 0.7rem 0.5rem;
+    font-size: 0.95rem;
+  }
+} 

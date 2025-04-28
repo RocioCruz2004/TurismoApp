@@ -1,0 +1,111 @@
+/* Estilos base */
+.recuperar-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Inter', sans-serif;
+  background-image: url('https://i.postimg.cc/9z5TZB1r/RUMBO-LOGI.png');
+  background-size: cover;
+  background-position: center;
+  position: absolute; /* Cambiado de 'relative' a 'absolute' */
+  width: 100%;  /* Asegura que ocupe todo el ancho de la pantalla */
+  margin: 0;    /* Elimina el margen */
+  padding: 0;   /* Elimina el padding */
+  top: 0;       /* Asegura que empiece desde el top */
+  left: 0;      /* Asegura que esté alineado al borde izquierdo */
+  z-index: -1;  /* Para que el fondo no se sobreponga a los demás elementos */
+}
+
+/* Contenedor principal */
+.recuperar-container {
+  background-color: rgba(100, 100, 100, 0.7); /* Color plomizo semi-transparente */
+  padding: 40px;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 500px; /* Mantén el tamaño máximo para que no se expanda demasiado */
+  text-align: center;
+  backdrop-filter: blur(5px); /* Efecto de desenfoque para mejor legibilidad */
+}
+
+/* Título */
+.recuperar-container h2 {
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 30px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Grupo de entrada */
+.input-group {
+  margin-bottom: 25px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+}
+
+/* Botón */
+button-recuperar[type="submit"] {
+  width: 100%;
+  padding: 15px;
+  background-color: #FF5B61;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  margin-top: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+button-recuperar[type="submit"]:hover {
+  background-color: #D93E45;
+  transform: translateY(-2px);
+}
+
+/* Flecha de retroceso */
+.back-link {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
+
+.back-link:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .recuperar-container {
+    padding: 30px 20px;
+    width: 85%;
+  }
+
+  .recuperar-container h2 {
+    font-size: 2rem;
+  }
+
+  .input-group input {
+    padding: 12px;
+    font-size: 1rem;
+  }
+
+  button-recuperar[type="submit"] {
+    padding: 12px;
+    font-size: 1.1rem;
+  }
+}

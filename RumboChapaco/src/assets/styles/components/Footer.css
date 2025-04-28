@@ -1,0 +1,70 @@
+/* Contenedor del footer */
+.footer-container {
+  background-color: #000000; /* Fondo negro */
+  color: #ffffff; /* Texto blanco */
+  display: flex; /* Alinea los elementos en una fila */
+  justify-content: space-between; /* Distribuye los elementos entre el logo, el texto y los íconos */
+  align-items: center; /* Alinea verticalmente todos los elementos al centro */
+  padding: 20px 30px; /* Espaciado interno */
+  width: 100%; /* Asegura que el footer ocupe todo el ancho */
+  box-sizing: border-box; /* Asegura que el padding se mantenga dentro del contenedor */
+}
+
+/* Logo a la izquierda */
+.footer-left {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Asegura que el logo se quede a la izquierda */
+}
+
+/* Tamaño del logo */
+.footer-logo-image {
+  width: 150px; /* Aumenta el tamaño del logo */
+}
+
+/* Derechos reservados centrados */
+.footer-center {
+  text-align: center;
+  flex: 1; /* Hace que ocupe el espacio restante entre el logo y los íconos */
+  font-size: 12px;
+}
+
+/* Íconos sociales a la derecha */
+.footer-right {
+  display: flex;
+  gap: 15px; /* Espaciado entre los íconos */
+  justify-content: flex-end; /* Alinea los íconos a la derecha */
+}
+
+/* Estilo de los íconos sociales */
+.social-icon {
+  color: #ffffff; /* Color blanco de los íconos */
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  color: #007bff; /* Color de los íconos cuando el usuario pasa el ratón */
+}
+
+/* Responsividad: en pantallas pequeñas */
+@media screen and (max-width: 768px) {
+  .footer-container {
+      flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+      padding: 15px; /* Reduce el padding en pantallas pequeñas */
+  }
+
+  .footer-left,
+  .footer-center,
+  .footer-right {
+      width: 100%;
+      justify-content: center;
+  }
+
+  .footer-logo-image {
+      width: 120px; /* Ajustar el tamaño del logo en pantallas pequeñas */
+  }
+
+  .footer-right {
+      gap: 10px; /* Reduce el espacio entre los íconos en pantallas pequeñas */
+  }
+}
