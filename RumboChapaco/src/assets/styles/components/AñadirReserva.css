@@ -1,116 +1,325 @@
-/* Estilos generales */
+:root {
+  --primary-color: #FF5B61;
+  --primary-hover: #D93E45;
+  --background-color: #FFFFFF;
+  --secondary-bg-color: #F5F0EB;
+  --text-color: #333333;
+  --text-light: #666666;
+  --border-color: #E0E0E0;
+  --shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  --radius: 8px;
+  --transition: all 0.3s ease;
+}
+
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f5f5f5;
-  }
-  
-  /* Contenedor principal */
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  font-family: 'Inter', 'Arial', sans-serif;
+}
+
+.añadir-reserva-container {
+  max-width: 1200px;
+  min-height: calc(100vh - 5.5rem);
+  margin: 5.5rem auto 2rem;
+  background: var(--background-color);
+  border-radius: var(--radius);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.2rem;
+  align-items: center;
+}
+
+.añadir-reserva-title {
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+  text-align: center;
+  letter-spacing: -1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.form-container {
+  display: flex;
+  width: 95%;
+  max-width: 1150px;
+  margin: 0 auto;
+  gap: 30px;
+  background: #fff6f7;
+  border-radius: var(--radius);
+  padding: 30px;
+
+}
+
+.left-section {
+  flex: 0.4;
+  display: flex;
+  flex-direction: column;
+}
+
+.right-section {
+  flex: 0.6;
+}
+
+.image-container {
+  height: 300px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 100px;
+  background-color: white;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.placeholder-image {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-light);
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 1rem;
+  background-image: linear-gradient(45deg, #f8f8f8 25%, transparent 25%, transparent 75%, #f8f8f8 75%, #f8f8f8),
+                    linear-gradient(45deg, #f8f8f8 25%, transparent 25%, transparent 75%, #f8f8f8 75%, #f8f8f8);
+  background-size: 20px 20px;
+  background-position: 0 0, 10px 10px;
+}
+
+form {
+  width: 100%;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.info-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: var(--text-color);
+  font-size: 0.95rem;
+}
+
+.info-label i {
+  color: var(--primary-color);
+  margin-right: 5px;
+}
+
+select, 
+input, 
+.react-datepicker__input-container input {
+  width: 100%;
+  padding: 12px 15px;
+  background-color: white;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  color: var(--text-color);
+  font-size: 0.9rem;
+  box-sizing: border-box;
+  transition: var(--transition);
+}
+
+select:focus, 
+input:focus, 
+.react-datepicker__input-container input:focus {
+  border-color: var(--primary-color);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(255, 91, 97, 0.2);
+}
+
+.disabled {
+  background-color: #f5f5f5;
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.date-picker {
+  width: 100%;
+}
+
+.quantity-input {
+  width: 100%;
+}
+
+.route-info {
+  background-color: white;
+  border-radius: var(--radius);
+  padding: 15px;
+  margin-bottom: 20px;
+  border-left: 3px solid var(--primary-color);
+}
+
+.route-info-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+}
+
+.route-info-item:last-child {
+  margin-bottom: 0;
+}
+
+.label {
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.value {
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.total-section {
+  margin-top: 25px;
+  padding-top: 15px;
+  border-top: 1px solid var(--border-color);
+}
+
+.total-text {
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.total-label {
+  font-weight: 500;
+}
+
+.total-amount {
+  font-weight: 700;
+  color: var(--primary-color);
+  font-size: 1.2rem;
+}
+
+.submit-btn {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 14px 24px;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.submit-btn:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+}
+
+/* DatePicker customization */
+.react-datepicker {
+  font-family: 'Inter', 'Arial', sans-serif;
+  border-color: var(--border-color);
+}
+
+.react-datepicker__header {
+  background-color: var(--secondary-bg-color);
+  border-bottom-color: var(--border-color);
+}
+
+.react-datepicker__current-month,
+.react-datepicker__day-name {
+  color: var(--text-color);
+}
+
+.react-datepicker__day {
+  color: var(--text-color);
+  transition: var(--transition);
+}
+
+.react-datepicker__day:hover {
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 50%;
+}
+
+.react-datepicker__day--selected {
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 50%;
+}
+
+.react-datepicker__day--disabled {
+  color: #ccc;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
   .añadir-reserva-container {
-    margin-top: 9rem !important;
-    display: flex;
+    padding: 1rem;
+    margin-top: 4.5rem;
+  }
+
+  .form-container {
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100vh;
+    width: 95%;
     padding: 20px;
-    background-color: #ffffff;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    margin-top: 50px;
   }
-  
-  /* Titulo principal */
-  .añadir-reserva-container h1 {
-    font-size: 2rem;
-    color: #FF5B61;
-    margin-bottom: 30px;
-    text-align: center;
-  }
-  
-  /* Formulario */
-  .añadir-reserva-container form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+
+  .left-section,
+  .right-section {
+    flex: 1;
     width: 100%;
-    max-width: 500px;
   }
-  
-  /* Inputs y Selects */
-  .añadir-reserva-container select,
-  .añadir-reserva-container input,
-  .añadir-reserva-container .react-datepicker-wrapper input {
-    padding: 10px;
-    font-size: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    outline: none;
+
+  .image-container {
+    height: 250px;
+    margin-bottom: 20px;
+    position: relative;
+    top: 0;
+  }
+
+  .añadir-reserva-title {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .añadir-reserva-container {
+    padding: 0.75rem;
+  }
+
+  .form-container {
     width: 100%;
-    transition: border 0.2s ease;
+    padding: 15px;
+    border-radius: 0;
   }
-  
-  .añadir-reserva-container select:focus,
-  .añadir-reserva-container input:focus {
-    border-color: #FF5B61;
+
+  .image-container {
+    height: 200px;
   }
-  
-  /* Botón de añadir reserva */
-  .añadir-reserva-container button {
-    padding: 12px;
-    background-color: #FF5B61;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    font-size: 1.2rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    width: 100%;
-    max-width: 200px;
-    align-self: center;
+
+  .añadir-reserva-title {
+    font-size: 1.5rem;
   }
-  
-  .añadir-reserva-container button:hover {
-    background-color: #D93E45;
-  }
-  
-  /* Etiquetas de los campos */
-  .añadir-reserva-container label {
-    font-size: 1.1rem;
-    color: #333;
-  }
-  
-  /* Contenido del precio */
-  .añadir-reserva-container p {
-    font-size: 1.1rem;
-    color: #333;
-    margin-top: 10px;
-  }
-  
-  /* Ajustes para móviles */
-  @media (max-width: 768px) {
-    .añadir-reserva-container {
-      padding: 15px;
-    }
-  
-    .añadir-reserva-container h1 {
-      font-size: 1.6rem;
-    }
-  
-    .añadir-reserva-container label,
-    .añadir-reserva-container p {
-      font-size: 1rem;
-    }
-  
-    .añadir-reserva-container button {
-      font-size: 1rem;
-      width: 100%;
-    }
-  }
-/* Estilo para el texto en negrilla */
-.añadir-reserva-container strong {
-    color: #FF5B61; /* Rojo */
-  }
-    
+}

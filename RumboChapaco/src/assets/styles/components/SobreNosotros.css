@@ -1,118 +1,98 @@
-
-/* Estilos base */
-.sobre-nosotros-container {
-  margin-top: 9rem !important;
-  font-family: 'Inter', sans-serif;
-  color: #333333;
+:root {
+  --primary-color: #FF5B61;
+  --primary-dark: #E04A50;
+  --secondary-color: #2C3E50;
+  --accent-color: #F7F9FC;
+  --text-color: #333333;
+  --light-gray: #E8E8E8;
 }
 
-h1, h2, h3 {
-  font-family: 'Poppins', sans-serif;
-  color: #333333;
+.sobre-nosotros-container {
+  padding-top: 80px;
 }
 
 /* Hero Section */
 .hero-section {
-  background-image: 
-    linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url('https://www.opinion.com.bo/media/opinion/images/2024/08/01/2024080120420424478.jpg');
+  position: relative;
+  height: 70vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+              url('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/11/8b/f6/c0/20171215-160333-largejpg.jpg?w=900&h=-1&s=1');
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
-  height: 400px;
+  background-attachment: fixed;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   color: white;
-  padding: 0 20px;
-  flex-direction: column;
-  position: relative;
+  padding: 2rem;
 }
 
 .hero-content {
-  width: 100%;
   max-width: 800px;
-  text-align: center;
-}
-
-/* Contenedor de texto con bordes redondeados */
-.hero-text-container {
-  background-color: rgba(128, 128, 128, 0.5); /* Color plomo con opacidad */
-  border-radius: 20px;
-  padding: 20px;
-  margin-bottom: 20px;
 }
 
 .hero-content h1 {
-  font-size: 3rem;
+  font-size: 3.5rem;
+  font-weight: 700;
   margin-bottom: 1rem;
-  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .hero-subtitle {
   font-size: 1.5rem;
-  color: white;
-}  
+  font-weight: 500;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  opacity: 0.9;
+}
 
-/* Mision y Vision */
+/* Misión y Visión */
 .mision-vision {
-  display: flex;
-  justify-content: space-between;
-  max-width: 1200px;
-  margin: 4rem auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
-  padding: 0 20px;
-  text-align: center;
-  transition: all 0.3s ease;
+  padding: 5rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.mision-vision .card {
-  background-color: #F5F0EB;
-  padding: 2rem;
-  border-radius: 8px;
-  flex: 1;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-  cursor: pointer;
+.card {
+  background-color: white;
+  padding: 3rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 
-/* Efecto hover para interactividad */
-.mision-vision .card:hover {
-  transform: translateY(-10px); /* Eleva el contenedor */
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Sombras más profundas */
-  background-color: #ee9d9d; /* Cambia el fondo a un tono rojo */
-  color: white; /* Cambia el texto a blanco para contraste */
+.card:hover {
+  transform: translateY(-5px);
 }
 
-.mision-vision h2 {
-  color: #FF5B61;
-  margin-bottom: 1rem;
-  font-size: 1.8rem;
+.card h2 {
+  color: var(--primary-color);
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
 }
 
-.mision-vision p {
+.card p {
+  color: var(--text-color);
   font-size: 1.1rem;
-  color: #333333;
-  transition: color 0.3s ease;
-}
-
-/* Cambio de color del texto cuando se hace hover */
-.mision-vision .card:hover p {
-  color: white; /* Cambia el color del texto a blanco en hover */
+  line-height: 1.6;
 }
 
 /* Valores */
 .valores-section {
-  background-color: #FFFFFF;
-  padding: 4rem 20px;
+  background-color: var(--accent-color);
+  padding: 5rem 2rem;
 }
 
 .section-title {
   text-align: center;
-  font-size: 2.2rem;
+  color: var(--secondary-color);
+  font-size: 2.5rem;
   margin-bottom: 3rem;
-  color: #FF5B61;
+  font-weight: 700;
 }
 
 .valores-grid {
@@ -124,76 +104,110 @@ h1, h2, h3 {
 }
 
 .valor-card {
-  background: #FFFFFF;
-  border: 1px solid #F5F0EB;
-  border-radius: 8px;
+  background-color: white;
   padding: 2rem;
+  border-radius: 12px;
   text-align: center;
   transition: transform 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
 
 .valor-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .valor-icon {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .valor-card h3 {
-  color: #D93E45;
+  color: var(--secondary-color);
+  font-size: 1.3rem;
   margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.valor-card p {
+  color: var(--text-color);
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
 /* Equipo */
 .equipo-section {
-  padding: 4rem 20px;
-  background-color: #F5F0EB;
+  padding: 5rem 2rem;
+  background-color: white;
 }
 
 .equipo-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 3rem;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .miembro-card {
-  background: white;
-  padding: 2rem;
-  border-radius: 8px;
   text-align: center;
+  padding: 2rem;
+  border-radius: 12px;
+  background-color: var(--accent-color);
+  transition: transform 0.3s ease;
 }
 
-.miembro-foto {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  background-color: #ddd;
-  margin: 0 auto 1.5rem;
-  background-size: cover;
+.miembro-card:hover {
+  transform: translateY(-5px);
+}
+
+.miembro-icon {
+  margin-bottom: 1.5rem;
+}
+
+.miembro-card h3 {
+  color: var(--secondary-color);
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
 }
 
 .cargo {
-  color: #FF5B61;
-  font-weight: bold;
+  color: var(--primary-color);
+  font-size: 1.1rem;
   margin-bottom: 1rem;
+  font-weight: 500;
 }
 
-/* Responsive */
+.miembro-card p:not(.cargo) {
+  color: var(--text-color);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
 @media (max-width: 768px) {
-  .mision-vision {
-    flex-direction: column;
-  }
-  
   .hero-content h1 {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
   }
-  
+
   .hero-subtitle {
     font-size: 1.2rem;
+  }
+
+  .mision-vision {
+    grid-template-columns: 1fr;
+    padding: 3rem 1.5rem;
+  }
+
+  .card {
+    padding: 2rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .valores-section,
+  .equipo-section {
+    padding: 3rem 1.5rem;
   }
 }

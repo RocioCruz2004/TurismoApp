@@ -1,70 +1,143 @@
+/* Variables CSS */
+:root {
+  --primary-color: #FF5B61;
+  --white: #ffffff;
+  --black: #000000;
+  --hover-color: #007bff;
+  --transition-default: all 0.3s ease;
+}
+
 /* Contenedor del footer */
 .footer-container {
-  background-color: #000000; /* Fondo negro */
-  color: #ffffff; /* Texto blanco */
-  display: flex; /* Alinea los elementos en una fila */
-  justify-content: space-between; /* Distribuye los elementos entre el logo, el texto y los íconos */
-  align-items: center; /* Alinea verticalmente todos los elementos al centro */
-  padding: 20px 30px; /* Espaciado interno */
-  width: 100%; /* Asegura que el footer ocupe todo el ancho */
-  box-sizing: border-box; /* Asegura que el padding se mantenga dentro del contenedor */
+  background-color: var(--black);
+  color: var(--white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 100;
 }
 
 /* Logo a la izquierda */
 .footer-left {
   display: flex;
   align-items: center;
-  justify-content: flex-start; /* Asegura que el logo se quede a la izquierda */
+  justify-content: flex-start;
 }
 
 /* Tamaño del logo */
 .footer-logo-image {
-  width: 150px; /* Aumenta el tamaño del logo */
+  width: 150px;
+  transition: var(--transition-default);
+}
+
+.footer-logo-image:hover {
+  transform: scale(1.05);
 }
 
 /* Derechos reservados centrados */
 .footer-center {
   text-align: center;
-  flex: 1; /* Hace que ocupe el espacio restante entre el logo y los íconos */
-  font-size: 12px;
+  flex: 1;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 0.5px;
 }
 
 /* Íconos sociales a la derecha */
 .footer-right {
   display: flex;
-  gap: 15px; /* Espaciado entre los íconos */
-  justify-content: flex-end; /* Alinea los íconos a la derecha */
+  gap: 20px;
+  justify-content: flex-end;
 }
 
 /* Estilo de los íconos sociales */
 .social-icon {
-  color: #ffffff; /* Color blanco de los íconos */
+  color: var(--white);
   text-decoration: none;
+  transition: var(--transition-default);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .social-icon:hover {
-  color: #007bff; /* Color de los íconos cuando el usuario pasa el ratón */
+  color: var(--primary-color);
+  background: var(--white);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Responsividad: en pantallas pequeñas */
+/* Responsividad */
+@media screen and (max-width: 1024px) {
+  .footer-container {
+    padding: 15px 20px;
+  }
+
+  .footer-logo-image {
+    width: 130px;
+  }
+
+  .footer-center {
+    font-size: 12px;
+  }
+
+  .social-icon {
+    width: 35px;
+    height: 35px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .footer-container {
-      flex-direction: column; /* Cambia a columna en pantallas pequeñas */
-      padding: 15px; /* Reduce el padding en pantallas pequeñas */
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
   }
 
   .footer-left,
   .footer-center,
   .footer-right {
-      width: 100%;
-      justify-content: center;
+    width: 100%;
+    justify-content: center;
   }
 
   .footer-logo-image {
-      width: 120px; /* Ajustar el tamaño del logo en pantallas pequeñas */
+    width: 120px;
+  }
+
+  .footer-center {
+    order: 3;
+    margin-top: 10px;
   }
 
   .footer-right {
-      gap: 10px; /* Reduce el espacio entre los íconos en pantallas pequeñas */
+    gap: 15px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .footer-container {
+    padding: 15px;
+  }
+
+  .footer-logo-image {
+    width: 100px;
+  }
+
+  .footer-center {
+    font-size: 11px;
+  }
+
+  .social-icon {
+    width: 30px;
+    height: 30px;
   }
 }

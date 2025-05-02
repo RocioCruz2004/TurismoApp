@@ -1,88 +1,174 @@
 /* Contenedor principal */
 .pago-reserva-container {
-    font-family: 'Inter', sans-serif;
-    padding: 250px;
-    max-width:auto; /* Limitar el tamaño del contenedor */
-    margin: auto; /* Centrado automático */
-    background-color: #fff;
-    border-radius: 20px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    text-align: center; /* Centrar todo el contenido */
-  }
-  
+  font-family: 'Inter', sans-serif;
+  max-width: 1200px;
+  margin: 120px auto 2rem;
+  padding: 0;
+  position: relative;
+}
+
+/* Sección de pago */
+.pago-section {
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  padding: 3rem;
+  margin-bottom: 2rem;
+}
+
 /* Título principal */
 .pago-reserva-container h2 {
-    font-size: 2.5rem;
-    color: #FF5B61;
-    text-align: center;
-    margin: 0; /* Eliminar margen inferior */
-    padding: 10px 0; /* Reducir el padding superior e inferior */
+  font-size: 2.5rem;
+  color: #FF5B61;
+  text-align: center;
+  margin-bottom: 2rem;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.pago-reserva-container h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: #FF5B61;
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.pago-reserva-container h2:hover::after {
+  width: 150px;
+}
+
+/* Información de la reserva */
+.reserva-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+  padding: 2rem;
+  background-color: #F8F9FA;
+  border-radius: 15px;
+}
+
+.reserva-info p {
+  font-size: 1.2rem;
+  color: #2C3E50;
+  margin: 0;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.reserva-info p:hover {
+  transform: translateY(-3px);
+}
+
+.reserva-info strong {
+  color: #FF5B61;
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Código QR */
+.qr-container {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 15px;
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.qr-code {
+  display: inline-block;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.qr-code canvas {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Botón de confirmar */
+.btn-confirmar {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 1.2rem;
+  background-color: #FF5B61;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.btn-confirmar:hover {
+  background-color: #E04A50;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(255, 91, 97, 0.2);
+}
+
+.btn-confirmar:active {
+  transform: translateY(0);
+}
+
+/* Loader */
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+}
+
+.loader p {
+  font-size: 1.2rem;
+  color: #FF5B61;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .pago-reserva-container {
+    margin: 80px 1rem 2rem;
   }
-  
-  /* Estilo para la información de la reserva */
-  .pago-reserva-container p {
-    font-size: 1.2rem;
-    color: #333;
-    margin-bottom: 10px;
-    line-height: 1.6;
-    text-align: center; /* Alineado a la izquierda */
-    padding:  0px;
+
+  .pago-section {
+    padding: 1.5rem;
   }
-  
-  
-  /* Estilo para el QR */
-  .pago-reserva-container .qr-code {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 30px;
+
+  .pago-reserva-container h2 {
+    font-size: 2rem;
   }
-  
-  .pago-reserva-container .qr-code canvas {
-    border: 2px solid #ffffff;
-    border-radius: 0px;
-    padding: 10px;
+
+  .reserva-info {
+    grid-template-columns: 1fr;
+    padding: 1rem;
   }
-  
-  /* Botón de confirmar y descargar comprobante */
-  .pago-reserva-container button {
-    width: 60%; /* El botón tendrá un 60% del ancho del contenedor */
-    padding: 15px;
-    background-color: #FF5B61;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    font-size: 1.5rem;
-    cursor: pointer;
-    margin: 30px auto; /* Centrado automático */
-    display: block;
-    text-align: center;
+
+  .qr-code canvas {
+    width: 100%;
+    max-width: 300px;
   }
-  
-  /* Hover del botón */
-  .pago-reserva-container button:hover {
-    background-color: #FF3C4D;
+
+  .btn-confirmar {
+    max-width: 100%;
   }
-  
-  /* Estilos responsivos */
-  @media (max-width: 768px) {
-    .pago-reserva-container {
-      padding: 20px;
-    }
-  
-    .pago-reserva-container h2 {
-      font-size: 2rem;
-    }
-  
-    .pago-reserva-container p {
-      font-size: 1rem;
-    }
-  
-    .pago-reserva-container button {
-      font-size: 1.2rem;
-    }
-  
-    .pago-reserva-container .qr-code {
-      margin-bottom: 20px;
-    }
-  }
+}
   

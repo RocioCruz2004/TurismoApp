@@ -1,110 +1,191 @@
-/* Estilos base para el navbar admin */
+/* Variables CSS */
+:root {
+  --primary-color: #FF5B61;
+  --white: #ffffff;
+  --black: #000000;
+  --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.15);
+  --transition-default: all 0.3s ease;
+  --navbar-height: 90px;
+}
+
+/* Navbar */
 .navbar-admin-container {
-    background-color: #FF5B61;
-    padding: 1rem 2rem;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    position: fixed;  /* Fijar el navbar en la parte superior */
-    width: 100%;  /* Asegura que el navbar ocupe todo el ancho */
-    top: 0;
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;  /* Logo a la izquierda, enlaces a la derecha */
-    overflow-x: hidden;
-    margin: 0;
+  background-color: var(--primary-color);
+  padding: 0.5rem 2rem;
+  box-shadow: var(--shadow-sm);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-sizing: border-box;
+  height: var(--navbar-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Navegación */
+.navbar-admin {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 2rem;
+  height: 100%;
+}
+
+/* Logo */
+.navbar-admin-logo {
+  flex-shrink: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-admin-logo img {
+  height: 70px;
+  transition: var(--transition-default);
+}
+
+.navbar-admin-logo img:hover {
+  transform: scale(1.05);
+}
+
+.navbar-admin li {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-admin-link {
+  color: var(--white);
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  position: relative;
+  padding: 0.5rem 1rem;
+  transition: var(--transition-default);
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  height: 100%;
+}
+
+.navbar-admin-link svg {
+  font-size: 1.3rem;
+  transition: var(--transition-default);
+}
+
+.navbar-admin-link:hover svg {
+  transform: scale(1.1);
+}
+
+.navbar-admin-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--white);
+  transition: var(--transition-default);
+}
+
+.navbar-admin-link:hover::after,
+.navbar-admin-link.active::after {
+  width: 100%;
+}
+
+.navbar-admin-link.active {
+  font-weight: 600;
+}
+
+/* Botón de cerrar sesión */
+.navbar-admin-logout-btn {
+  background-color: var(--white);
+  color: var(--primary-color);
+  padding: 0.6rem 1.2rem;
+  border-radius: 25px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: var(--transition-default);
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  border: 2px solid var(--white);
+}
+
+.navbar-admin-logout-btn:hover {
+  background-color: transparent;
+  color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .navbar-admin-container {
+    padding: 1rem;
+    height: auto;
+    flex-direction: column;
   }
-  
-  /* Logo del navbar */
+
+  .navbar-admin {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.5rem;
+  }
+
   .navbar-admin-logo {
-    display: flex;
-    justify-content: flex-start;  /* Alineamos el logo a la izquierda */
+    margin-bottom: 1rem;
+    height: 60px;
   }
-  
-  .logo-admin {
-    width: 220px;  /* Aumentamos el tamaño del logo */
+
+  .navbar-admin-logo img {
+    height: 50px;
+  }
+
+  .navbar-admin li {
+    width: 100%;
     height: auto;
   }
-  
-  /* Estilo para los enlaces del navbar */
-  .navbar-admin {
-    display: flex;
-    list-style: none;
-    gap: 1.5rem;  /* Reducimos el espacio entre los enlaces */
-    justify-content: flex-end;  /* Coloca los enlaces a la derecha */
-    margin-right: 4rem; /* Espacio de margen a la derecha */
-  }
-  
+
   .navbar-admin-link {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: white;
-    text-decoration: none;
-    font-size: 1.1rem;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
-    transition: all 0.3s ease;
+    padding: 0.8rem;
+    width: 100%;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    height: auto;
   }
-  
+
   .navbar-admin-link:hover {
-    transform: scale(1.1); /* Efecto de escala en hover */
+    background-color: rgba(255, 255, 255, 0.2);
   }
-  
-  .navbar-admin-link span {
-    margin-top: 8px;
-  }
-  
-  /* Botón Cerrar sesión */
+
   .navbar-admin-logout-btn {
-    background-color: white;
-    color: #FF5B61;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 25px;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.2rem;
+    width: 100%;
+    justify-content: center;
+    padding: 0.8rem;
+    margin-top: 0.5rem;
   }
-  
-  .navbar-admin-logout-btn:hover {
-    background-color: #D93E45;
-    color: white;
-    transform: translateY(-3px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  }
-  
-  .navbar-admin-logout-btn svg {
-    font-size: 1.2rem;
-  }
-  
-  /* Responsividad */
-  @media (max-width: 768px) {
-    .navbar-admin-container {
-      padding: 0.8rem 1.5rem; /* Menos padding en pantallas pequeñas */
-    }
-  
-    .navbar-admin {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    .navbar-admin-link {
-      font-size: 1.1rem;
-    }
-  
-    .navbar-admin-logout-btn {
-      font-size: 1.1rem;
-      padding: 10px 15px;
-    }
-  }
-  
-  /* Asegurar que el contenido debajo del navbar tenga espacio suficiente */
-  body {
-    margin-top: 140px; /* Ajuste el margen superior dependiendo de la altura del navbar */
-  }
+}
+
+/* Ajuste para el contenido debajo del navbar */
+main {
+  padding-top: var(--navbar-height);
+  min-height: calc(100vh - var(--navbar-height));
+}
+
+/* Reset del padding del body */
+body {
+  margin: 0;
+  padding: 0;
+}
   

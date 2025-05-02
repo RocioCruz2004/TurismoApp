@@ -1,19 +1,30 @@
 /* src/assets/styles/components/EditarReservaAdmin.css */
+.listar-reservas-container {
+  max-width: 1200px;
+  margin: 5.5rem auto;
+  padding: 1.5rem;
+  background-color: white;
+  font-family: 'Inter', sans-serif;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  font-size: 2rem!important;
+}
 
 .editar-reserva-admin-container {
-  width: 100vw;
+  max-width: 1200px;
   min-height: 100vh;
-  margin: 0;
+  margin: 5.5rem auto;
   background: #fff;
   border-radius: 0;
   box-shadow: none;
-  padding: 5vh 0 5vh 0;
+  padding: 1.5rem;
   display: flex;
   flex-direction: column;
   gap: 2.2rem;
-  font-family: 'Poppins', 'Inter', sans-serif;
+  font-family: 'Inter', sans-serif;
   align-items: center;
-  justify-content: center;
+  justify-content: right;
+  font-size: 2rem!important;
 }
 
 .editar-reserva-admin-container h2 {

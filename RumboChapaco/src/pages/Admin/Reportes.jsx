@@ -2,7 +2,6 @@ import { useEffect, useRef, useState } from "react";
 import { ref, get } from "firebase/database";
 import { db } from "../../data/firebaseConfig";
 import { NavbarAdmin } from "../../components/Admin/NavbarAdmin";
-import ReportesIcon from "../../assets/styles/base/reporte.svg";
 import { jsPDF } from "jspdf";
 import autoTable from "jspdf-autotable";
 import html2canvas from "html2canvas";
@@ -11,8 +10,8 @@ import {
   Title, Tooltip, Legend
 } from 'chart.js';
 import { Bar } from 'react-chartjs-2';
-// Import the CSS file
 import "../../assets/styles/components/Reportes.css";
+import logo from "../../assets/images/CHAPACONEGRO.png";
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
@@ -41,7 +40,6 @@ export function Reportes() {
   const chartRefDiario = useRef(null);
   const chartRefRuta = useRef(null);
 
-
   useEffect(() => {
     const fetchData = async () => {
       const snap = await get(ref(db, "reservas"));
@@ -63,7 +61,6 @@ export function Reportes() {
     });
   }, []);
   
-
   const generarReporteMensual = () => {
     const conteo = {};
     const detalles = [];
@@ -89,10 +86,14 @@ export function Reportes() {
 
   const descargarPDF = async () => {
     const doc = new jsPDF();
+    
+    // Agregar logo
+    doc.addImage(logo, 'PNG', 10, 10, 40, 20);
+    
     doc.setFontSize(16);
-    doc.text("Reporte de Reservas Mensuales", 20, 20);
+    doc.text("Reporte de Reservas Mensuales", 60, 20);
     doc.setFontSize(12);
-    doc.text(`Desde: ${fechaInicio || "todos"} Hasta: ${fechaFin || "actual"}`, 20, 30);
+    doc.text(`Desde: ${fechaInicio || "todos"} Hasta: ${fechaFin || "actual"}`, 60, 30);
 
     autoTable(doc, {
       startY: 40,
@@ -126,9 +127,13 @@ export function Reportes() {
 
   const descargarPDFAnual = async () => {
     const doc = new jsPDF();
+    
+    // Agregar logo
+    doc.addImage(logo, 'PNG', 10, 10, 40, 20);
+    
     doc.setFontSize(16);
-    doc.text("Reporte de Reservas por Año", 20, 20);
-    doc.text(`Desde: ${anioInicio || "todos"} Hasta: ${anioFin || "actual"}`, 20, 30);
+    doc.text("Reporte de Reservas por Año", 60, 20);
+    doc.text(`Desde: ${anioInicio || "todos"} Hasta: ${anioFin || "actual"}`, 60, 30);
   
     autoTable(doc, {
       startY: 40,
@@ -157,9 +162,13 @@ export function Reportes() {
   
   const descargarPDFDiario = async () => {
     const doc = new jsPDF();
+    
+    // Agregar logo
+    doc.addImage(logo, 'PNG', 10, 10, 40, 20);
+    
     doc.setFontSize(16);
-    doc.text("Reporte de Reservas Diarias", 20, 20);
-    doc.text(`Desde: ${fechaDiaInicio || "todos"} Hasta: ${fechaDiaFin || "actual"}`, 20, 30);
+    doc.text("Reporte de Reservas Diarias", 60, 20);
+    doc.text(`Desde: ${fechaDiaInicio || "todos"} Hasta: ${fechaDiaFin || "actual"}`, 60, 30);
   
     autoTable(doc, {
       startY: 40,
@@ -188,11 +197,15 @@ export function Reportes() {
  
   const descargarPDFRuta = async () => {
     const doc = new jsPDF();
+    
+    // Agregar logo
+    doc.addImage(logo, 'PNG', 10, 10, 40, 20);
+    
     doc.setFontSize(16);
-    doc.text("Reporte de Reservas por Ruta", 20, 20);
+    doc.text("Reporte de Reservas por Ruta", 60, 20);
   
     autoTable(doc, {
-      startY: 30,
+      startY: 40,
       head: [["Ruta", "Cantidad"]],
       body: reporteRuta.resumen.map(r => [r.nombreRuta, r.cantidad])
     });
@@ -214,7 +227,7 @@ export function Reportes() {
     });
   
     doc.save("reporte_reservas_ruta.pdf");
-  }; 
+  };
 
   const generarReporteAnual = () => {
     const conteo = {};
@@ -284,8 +297,6 @@ export function Reportes() {
     });
   };
   
-  
-
   const resumen = reporteMensual.resumen || [];
   const cantidades = resumen.map(r => r.cantidad);
   const max = Math.max(...cantidades);
@@ -295,8 +306,7 @@ export function Reportes() {
     <>
       <NavbarAdmin />
       <div className="reportes-container">
-      <img src={ReportesIcon} alt="Reportes" className="reportes-icon" />
-      <h1 className="reportes-title">GENERAR REPORTES</h1>
+        <h1 className="reportes-title">Generar Reportes</h1>
 
         <details open>
           <summary><strong>Reservas Mensuales</strong></summary>
@@ -352,7 +362,6 @@ export function Reportes() {
                     }]
                   }}
                 />
-                
               </div>
 
               <button className="download-btn" onClick={descargarPDF}>📥 Descargar PDF</button>

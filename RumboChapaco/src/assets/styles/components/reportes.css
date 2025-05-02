@@ -16,21 +16,28 @@
     --text: #333333;
     /* Negro atenuado - textos principales */
 }
-
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-gray);
+    color: var(--text-dark);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+  
 .reportes-container {
     max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+    margin: 5.5rem auto;
+    padding: 1.5rem;
     background-color: var(--white);
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    margin-top: 156px;
 }
 
 .reportes-header {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
     margin-bottom: 30px;
     background: linear-gradient(to right, var(--primary), var(--primary-dark));
     padding: 15px;
@@ -44,11 +51,10 @@
 }
 
 .reportes-title {
-    color: black;
-    text-align: center;
-    font-size: 2.2rem;
+    color: #333333;
+    text-align: left;
+    font-size: 2rem;
     margin: 0;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 details {

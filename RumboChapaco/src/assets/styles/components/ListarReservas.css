@@ -1,147 +1,281 @@
-/* Estilos base */
-.listar-reservas-container {
-  width: 90%;
-  max-width: 1400px;
-  margin: 100px auto 2rem;
-  padding: 0 1rem;
-  font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
-  color: #333333;
-  background-color: #FFFFFF;
-  margin-top: 190px;
+:root {
+  --primary-color: #FF5B61;
+  --primary-hover: #D93E45;
+  --background: #FFFFFF;
+  --text-color: #333333;
+  --border-color: #E1E1E1;
+  --light-bg: #F9F9F9;
+  --shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  --radius: 8px;
+  --transition: all 0.3s ease;
+  --bg-gray: #f8f9fa;
+  --table-hover: #fff5f5;
 }
 
-/* Encabezado */
+body {
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-gray);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Main container styles */
+.listar-reservas-container {
+  max-width: 1200px;
+  margin: 5.5rem auto;
+  padding: 2rem;
+  background-color: var(--background);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  font-size: 1rem;
+}
+
+/* Header section */
 .listar-reservas-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 2rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid #F5F0EB;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .listar-reservas-title {
   font-size: 1.8rem;
-  font-weight: 600;
-  color: #333333;
+  color: var(--text-color);
   margin: 0;
+  display: flex;
+  align-items: center;
 }
 
-.listar-reservas-add-btn {
-  background-color: #FF5B61;
-  color: #FFFFFF;
+.title-icon {
+  display: inline-flex;
+  margin-right: 0.75rem;
+  color: var(--primary-color);
+}
+
+.title-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.nueva-reserva-btn {
+  background-color: var(--primary-color);
+  color: white;
   border: none;
-  padding: 0.7rem 1.2rem;
-  border-radius: 6px;
-  font-weight: 500;
+  padding: 1.75rem 2rem; /* Asegúrate de que el padding sea igual */
+  border-radius: var(--radius);
+  cursor: pointer;
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  cursor: pointer;
-  transition: all 0.2s ease;
+  font-size: 1.2rem; /* Asegúrate de que el font-size sea igual */
+  font-weight: 500;
+  transition: var(--transition);
+  box-shadow: 0 2px 4px rgba(255, 91, 97, 0.2);
 }
 
-.listar-reservas-add-btn:hover {
-  background-color: #D93E45;
-  transform: translateY(-1px);
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+.nueva-reserva-btn:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(255, 91, 97, 0.3);
 }
 
-.plus-icon {
-  font-size: 1.1rem;
+.add-icon-reserva {
+  width: 18px;
+  height: 18px;
 }
 
-/* Filtros */
-.listar-reservas-filtros {
-  background-color: #F5F0EB;
-  border-radius: 8px;
-  padding: 1.5rem;
-  margin-bottom: 2rem;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+/* Search and filter container */
+.search-and-filter-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
+/* Search section */
 .search-container {
   position: relative;
-  margin-bottom: 1.5rem;
+  flex: 1;
+  max-width: 500px;
 }
 
 .listar-reservas-search {
   width: 100%;
-  padding: 0.8rem 1rem 0.8rem 2.5rem;
-  border: 1px solid #ddd;
-  border-radius: 6px;
+  padding: 0.75rem 1rem 0.75rem 2.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
   font-size: 0.95rem;
-  transition: border 0.2s;
-  background-color: #FFFFFF;
-  color: #333333;
+  transition: var(--transition);
 }
 
 .listar-reservas-search:focus {
   outline: none;
-  border-color: #FF5B61;
+  border-color: var(--primary-color);
   box-shadow: 0 0 0 2px rgba(255, 91, 97, 0.2);
 }
 
 .search-icon {
   position: absolute;
-  left: 1rem;
+  left: 0.75rem;
   top: 50%;
   transform: translateY(-50%);
-  width: 1rem;
-  height: 1rem;
-  fill: #FF5B61;
+  width: 18px;
+  height: 18px;
+  color: var(--text-color);
+}
+
+.clear-search-btn {
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--text-color);
+  cursor: pointer;
+  display: flex;
+  padding: 0.25rem;
+}
+
+.clear-search-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+.clear-search-btn:hover {
+  color: var(--primary-color);
+}
+
+/* Filter toggle button */
+.filter-toggle {
+  background-color: white;
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: var(--transition);
+}
+
+.filter-toggle:hover {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+.filter-toggle .filter-icon {
+  width: 18px;
+  height: 18px;
+}
+
+.filter-toggle .arrow-icon {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.3s ease;
+}
+
+.arrow-down {
+  transform: rotate(0deg);
+}
+
+.arrow-up {
+  transform: rotate(180deg);
+}
+
+/* Filter section */
+.listar-reservas-filtros {
+  background-color: var(--light-bg);
+  border-radius: var(--radius);
+  padding: 0;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+  transition: var(--transition);
+  border: 1px solid var(--border-color);
 }
 
 .filters-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1.5rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.5s ease;
+  padding: 0 1.5rem;
 }
 
+.filters-expanded {
+  padding: 1.5rem;
+}
+
+.filters-expanded .filters-grid {
+  max-height: 500px;
+  padding: 1rem 0;
+}
+
+/* Month filters */
 .month-filter, .year-filter {
-  background-color: #FFFFFF;
-  padding: 1rem;
-  border-radius: 6px;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  background-color: white;
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  box-shadow: var(--shadow);
 }
 
 .month-filter h3, .year-filter h3 {
+  font-size: 1rem;
   margin-top: 0;
   margin-bottom: 1rem;
-  font-size: 1rem;
-  color: #333333;
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.filter-section-icon {
+  width: 18px;
+  height: 18px;
+  color: var(--primary-color);
 }
 
 .month-checkboxes {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
   gap: 0.5rem;
 }
 
 .month-label {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  cursor: pointer;
   font-size: 0.9rem;
-  color: #333333;
+  cursor: pointer;
+  padding: 0.25rem;
+  transition: var(--transition);
+  border-radius: 4px;
+}
+
+.month-label:hover {
+  background-color: #f0f0f0;
 }
 
 .month-checkbox {
-  width: 1.1rem;
-  height: 1.1rem;
-  accent-color: #FF5B61;
+  margin-right: 0.5rem;
+  accent-color: var(--primary-color);
   cursor: pointer;
 }
 
 .month-name {
-  transition: color 0.2s;
+  text-transform: capitalize;
 }
 
-.month-label:hover .month-name {
-  color: #FF5B61;
-}
-
+/* Year filters */
 .year-inputs {
   display: flex;
   gap: 1rem;
@@ -153,188 +287,306 @@
 
 .input-group label {
   display: block;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.5rem;
   font-size: 0.9rem;
-  color: #333333;
+  color: var(--text-color);
 }
 
 .year-input {
   width: 100%;
-  padding: 0.6rem;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
   font-size: 0.9rem;
-  background-color: #FFFFFF;
-  color: #333333;
+  transition: var(--transition);
 }
 
 .year-input:focus {
   outline: none;
-  border-color: #FF5B61;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(255, 91, 97, 0.2);
+}
+
+/* Clear button */
+.clear-filter-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .listar-reservas-clear-btn {
-  background-color: #FFFFFF;
-  color: #FF5B61;
-  border: 1px solid #FF5B61;
-  padding: 0.6rem 1rem;
-  border-radius: 6px;
-  font-weight: 500;
+  background-color: white;
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius);
+  cursor: pointer;
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  cursor: pointer;
-  transition: all 0.2s;
-  grid-column: span 2;
-  justify-self: end;
-  width: auto;
-  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  transition: var(--transition);
 }
 
-.listar-reservas-clear-btn:hover {
-  background-color: #FF5B61;
-  color: #FFFFFF;
+.listar-reservas-clear-btn:hover:not(:disabled) {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+.listar-reservas-clear-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .clear-icon {
-  width: 1rem;
-  height: 1rem;
-  fill: currentColor;
+  width: 16px;
+  height: 16px;
 }
 
-/* Tabla */
+/* Results counter */
+.results-counter {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  color: var(--text-color);
+}
+
+.results-text {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.results-icon {
+  width: 16px;
+  height: 16px;
+  color: var(--primary-color);
+}
+
+/* Table styles */
 .table-container {
   overflow-x: auto;
-  border-radius: 8px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-  background-color: #FFFFFF;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
 }
 
 .listar-reservas-table {
   width: 100%;
-  border-collapse: separate;
-  border-spacing: 0;
-  background-color: #FFFFFF;
-  border-radius: 8px;
-  overflow: hidden;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  background-color: white;
+}
+
+.listar-reservas-table th,
+.listar-reservas-table td {
+  padding: 0.8rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
 }
 
 .listar-reservas-table th {
-  background-color: #FF5B61;
-  color: #FFFFFF;
-  font-weight: 500;
-  padding: 1rem;
-  text-align: left;
+  background-color: var(--light-bg);
+  font-weight: 600;
+  color: var(--text-color);
   position: sticky;
   top: 0;
-}
-
-.listar-reservas-table td {
-  padding: 0.8rem 1rem;
-  border-bottom: 1px solid #F5F0EB;
-  font-size: 0.9rem;
-  color: #333333;
+  z-index: 1;
 }
 
 .listar-reservas-table tr:last-child td {
   border-bottom: none;
 }
 
-.listar-reservas-table tr:hover td {
-  background-color: #F5F0EB;
+.listar-reservas-table tr:hover {
+  background-color: var(--table-hover);
 }
 
-.actions-cell {
+.table-cell-with-icon {
   display: flex;
+  align-items: center;
   gap: 0.5rem;
 }
 
-.edit-btn, .delete-btn {
-  border: none;
-  background: none;
-  padding: 0.4rem;
-  border-radius: 4px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.2s;
+.table-cell-with-icon svg {
+  width: 16px;
+  height: 16px;
+  color: var(--primary-color);
+  opacity: 0.8;
 }
 
-.edit-btn {
-  color: #FF5B61;
-  border: 1px solid #FF5B61;
-}
-
-.edit-btn:hover {
-  background-color: #FF5B61;
-  color: #FFFFFF;
-}
-
-.delete-btn {
-  color: #FFFFFF;
-  background-color: #FF5B61;
-  border: 1px solid #FF5B61;
-}
-
-.delete-btn:hover {
-  background-color: #D93E45;
-  border-color: #D93E45;
-}
-
-.icon {
-  width: 1.2rem;
-  height: 1.2rem;
-  fill: currentColor;
-}
-
-/* Sin resultados */
-.no-results {
-  text-align: center;
-  padding: 2rem;
-  background-color: #FFFFFF;
-}
-
-.no-results-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
-  color: #333333;
-}
-
-.no-results-icon {
-  width: 2rem;
-  height: 2rem;
-  fill: #FF5B61;
-}
-
-/* Truncar texto largo */
 .truncate {
-  max-width: 150px;
+  max-width: 120px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-/* Responsive */
+/* Action buttons */
+.actions-cell {
+  white-space: nowrap;
+}
+
+.actions-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.edit-boton, .delete-btn {
+  padding: 0.5rem 0.75rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: var(--transition);
+  font-weight: 500;
+}
+
+.edit-boton {
+  background-color: #837f7f;
+  color: white;
+}
+
+.delete-btn {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.edit-boton:hover {
+  background-color: #333333;
+  transform: translateY(-2px);
+}
+
+.delete-btn:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+.edit-icon, .delete-icon {
+  width: 14px;
+  height: 14px;
+}
+
+/* No results message */
+.no-results {
+  text-align: center;
+  padding: 2.5rem !important;
+  color: var(--text-color);
+}
+
+.no-results-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.no-results-icon {
+  width: 32px;
+  height: 32px;
+  color: var(--primary-color);
+  opacity: 0.6;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .listar-reservas-container {
+    width: 95%;
+    padding: 1.5rem;
+    margin: 5rem auto;
+  }
+  
+  .listar-reservas-title {
+    font-size: 1.5rem;
+  }
+  
+  .nueva-reserva-btn {
+    padding: 0.6rem 1rem;
+  }
+}
+
 @media (max-width: 768px) {
+  .listar-reservas-container {
+    padding: 1.25rem;
+    margin: 4.5rem auto;
+  }
+  
+  .listar-reservas-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .nueva-reserva-btn {
+    align-self: flex-start;
+  }
+  
+  .search-and-filter-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .search-container {
+    max-width: none;
+  }
+  
   .filters-grid {
     grid-template-columns: 1fr;
+  }
+  
+  .listar-reservas-table {
+    font-size: 0.85rem;
+  }
+  
+  .listar-reservas-table th,
+  .listar-reservas-table td {
+    padding: 0.7rem;
+  }
+  
+  .truncate {
+    max-width: 80px;
+  }
+  
+  .actions-buttons {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .listar-reservas-container {
+    padding: 1rem;
+    margin: 4rem auto;
+  }
+  
+  .listar-reservas-title {
+    font-size: 1.3rem;
   }
   
   .month-checkboxes {
     grid-template-columns: repeat(3, 1fr);
   }
   
-  .listar-reservas-header {
+  .year-inputs {
     flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
+    gap: 0.75rem;
   }
   
-  .listar-reservas-add-btn {
-    width: 100%;
-    justify-content: center;
+  .listar-reservas-table th,
+  .listar-reservas-table td {
+    padding: 0.6rem;
+    font-size: 0.8rem;
+  }
+  
+  .truncate {
+    max-width: 60px;
+  }
+  
+  /* Hide less important columns on small screens */
+  .listar-reservas-table th:nth-child(1),
+  .listar-reservas-table td:nth-child(1) {
+    display: none;
   }
 }

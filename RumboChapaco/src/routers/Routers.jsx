@@ -1,20 +1,20 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { useParams } from "react-router-dom";
-import { Inicio } from "../pages/Inicio";
-import { SobreNosotros } from "../pages/SobreNosotros";
-import { PanelCliente } from "../pages/Cliente/PanelCliente";
+import { Inicio } from "../pages/Client/Inicio";
+import SobreNosotros from "../pages/Client/SobreNosotros";
+import { PanelCliente } from "../pages/Client/PanelCliente";
 import { PanelAdmin } from "../pages/Admin/PanelAdmin";
-import { Registro } from "../pages/Registro";
-import { Login } from "../pages/Login";
-import { RecuperarContrasena } from "../pages/RecuperarContrasena";
+import { Registro } from "../pages/auth/Registro";
+import { Login } from "../pages/auth/Login";
+import { RecuperarContrasena } from "../pages/auth/RecuperarContrasena";
 //SECCION CLIENTE
-import { MiPerfil } from "../pages/Cliente/MiPerfil";
-import { RutasDisponibles } from "../pages/Cliente/RutasDisponibles";
-import { MisReservas } from "../pages/Cliente/MisReservas";
-import { Clima } from "../pages/Cliente/Clima";
-import { DetalleRuta } from "../pages/Cliente/DetalleRuta";
-import { ReservarRuta } from "../pages/Cliente/ReservarRuta";
-import { PagoReserva } from "../pages/Cliente/PagoReserva";
+import { MiPerfil } from "../pages/Client/MiPerfil";
+import { RutasDisponibles } from "../pages/Client/RutasDisponibles";
+import { MisReservas } from "../pages/Client/MisReservas";
+import { Clima } from "../pages/Client/Clima";
+import { DetalleRuta } from "../pages/Client/DetalleRuta";
+import { ReservarRuta } from "../pages/Client/ReservarRuta";
+import { PagoReserva } from "../pages/Client/PagoReserva";
 //SECCION ADMINISTRADOR
 import { ListarRutas } from "../pages/Admin/ListarRutas";
 import { ListarReservas } from "../pages/Admin/ListarReservas";

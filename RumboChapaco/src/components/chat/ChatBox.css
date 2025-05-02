@@ -1,0 +1,53 @@
+/* src/components/chat/Chatbot.css */
+
+.chatbot-icon {
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.chatbot-container {
+  width: 300px;
+  height: 400px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+}
+
+.chatbot-header {
+  background-color: #FF5B61;
+  color: white;
+  padding: 10px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border-radius: 10px 10px 0 0;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.chatbot-container .react-chatbot-kit-chat {
+  background-color: #ffffff;
+  border-radius: 0 0 10px 10px;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Asegúrate de que el chatbot mantenga la paleta de colores */
+.react-chatbot-kit-chatbot {
+  background-color: #FF5B61;
+}
+
+.react-chatbot-kit-chatbot .chatbot-header {
+  background-color: #FF5B61;
+}
+
+.react-chatbot-kit-chatbot .chatbot-message {
+  color: #333333;
+}

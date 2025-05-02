@@ -1,155 +1,228 @@
-/* Estilos base */
+:root {
+  --primary-color: #FF5B61;
+  --primary-dark: #E04A50;
+  --secondary-color: #2C3E50;
+  --accent-color: #F7F9FC;
+  --text-color: #333333;
+  --light-gray: #E8E8E8;
+}
+
 .login-wrapper {
   display: flex;
-  height: 100vh;
-  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+  background-color: var(--accent-color);
 }
 
-/* Imagen izquierda */
 .login-left {
   flex: 1;
-  background-image: url('https://i.postimg.cc/9z5TZB1r/RUMBO-LOGI.png');
-  background-size: 100% 100%; /* Aseguramos que la imagen ocupe completamente el contenedor */
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://i.postimg.cc/kMzYwTXg/IMAGEM.png');
+  background-size: cover;
   background-position: center;
-  height: 100%; /* Aseguramos que la imagen ocupe todo el alto disponible */
+  display: flex;
+  align-items: flex-start;
+  padding: 2rem;
+  position: relative;
+  min-height: 100vh;
 }
 
-/* Parte derecha */
+.back-link {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: transform 0.3s ease;
+  z-index: 2;
+}
+
+.back-link:hover {
+  transform: translateX(-5px);
+}
+
+.back-link span {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
 .login-right {
   flex: 1;
-  background-color: #FF5B61;
-  padding: 60px 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  color: white;
-  /* Ajustamos el tamaño máximo de la caja para el formulario */
-  max-width: 450px;
-  margin: 0 auto;
+  align-items: center;
+  padding: 4rem;
+  background-color: white;
 }
 
 .login-right h2 {
-  font-size: 3.8rem;
-  margin-bottom: 30px;
-  font-weight: bold;
-  text-align: center;
+  color: var(--secondary-color);
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  font-weight: 700;
 }
 
 form {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+  width: 100%;
+  max-width: 400px;
 }
 
-/* Estilo para los campos de entrada */
 .input-group {
-  display: flex;
-  align-items: center;
-  background-color: white;
-  border-radius: 10px;
-  padding: 12px 15px;
-  transition: transform 0.3s ease; /* Añadimos un efecto de transformación */
-}
-
-.input-group:hover {
-  transform: scale(1.02); /* Le damos un pequeño "zoom" al entrar */
-}
-
-.input-group input {
-  border: none;
-  outline: none;
-  flex: 1;
-  font-size: 1.1rem;
-  padding-left: 10px;
-  color: #333333;
+  position: relative;
+  margin-bottom: 2rem;
   width: 100%;
 }
 
 .input-group .icon {
-  color: #FF5B61;
-  font-size: 1.5rem;
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--primary-color);
+  font-size: 18px;
+  z-index: 2;
+  pointer-events: none;
 }
 
-/* Mostrar/ocultar contraseña */
-.password-toggle {
-  cursor: pointer;
-  color: #FF5B61;
-  font-size: 1.2rem;
-}
-
-/* Botón */
-button[type="submit"] {
-  padding: 12px;
+.input-group input {
+  width: 100%;
+  height: 55px;
+  padding: 0 15px 0 40px;
+  border: 2px solid var(--light-gray);
+  border-radius: 8px;
+  font-size: 16px;
   background-color: white;
-  color: #FF5B61;
-  border: none;
-  border-radius: 30px;
-  font-size: 1.5rem;
+  color: var(--text-color);
+}
+
+.input-group input::placeholder {
+  color: #999;
+  opacity: 1;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(255, 91, 97, 0.1);
+}
+
+.password-toggle {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--primary-color);
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  font-weight: bold;
+  z-index: 2;
+  background: none;
+  border: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  overflow: hidden; /* Evita duplicación visual */
+}
+
+.password-toggle:hover {
+  color: var(--primary-dark);
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 button[type="submit"]:hover {
-  background-color: #D93E45;
-  color: white;
-  transform: scale(1.05); /* Efecto de aumento al hacer hover */
+  background-color: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(255, 91, 97, 0.3);
 }
 
-/* Enlaces */
 .links-login {
-  margin-top: 20px;
+  margin-top: 2rem;
   text-align: center;
 }
 
+.links-login p {
+  margin: 0.5rem 0;
+}
+
 .links-login a {
-  color: white;
-  text-decoration: underline;
-  font-size: 1rem;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
   transition: color 0.3s ease;
 }
 
 .links-login a:hover {
-  color: #D93E45; /* Cambio de color al hacer hover */
+  color: var(--primary-dark);
 }
 
-/* Responsive */
+.login-left-content {
+  position: absolute;
+  bottom: 4rem;
+  left: 2rem;
+  color: white;
+  z-index: 2;
+  text-align: left;
+}
+
+.login-left-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+.login-left-content p {
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  color: white;
+  opacity: 0.9;
+}
+
 @media (max-width: 768px) {
   .login-wrapper {
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
   }
 
   .login-left {
-    min-width: 100%;
-    height: 50%;
-    background-size: contain;
+    min-height: 300px;
+    background-attachment: fixed;
   }
 
   .login-right {
-    max-width: 100%;
-    padding: 30px 20px;
+    padding: 3rem 2rem;
   }
 
   .login-right h2 {
     font-size: 2rem;
+    margin-bottom: 2rem;
   }
 
-  .input-group {
-    padding: 10px 10px;
+  .login-left-content {
+    bottom: 2rem;
+    left: 1rem;
   }
 
-  .input-group input {
-    font-size: 1rem;
+  .login-left-content h1 {
+    font-size: 2rem;
   }
 
-  button[type="submit"] {
+  .login-left-content p {
     font-size: 1.2rem;
-    padding: 12px;
-  }
-
-  .links-login a {
-    font-size: 0.9rem;
   }
 }

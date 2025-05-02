@@ -1,15 +1,15 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './assets/styles/base/fonts.css';
-import './assets/styles/base/reset.css';
-import './App.css';
-import { Routers } from './routers/Routers'
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
+import "./assets/styles/base/fonts.css";
+import "./assets/styles/base/reset.css";
+import { Routers } from "./routers/Routers";
+import ChatBox from './components/chat/ChatBox';
 
 function App() {
-    return (
+  return (
     <>
       <Routers/>
+      <ChatBox />
     </>
   )
 }
